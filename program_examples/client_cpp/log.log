@@ -1,0 +1,12 @@
+rm -f example
+g++ -g -Wall -std=c++11 -pthread -lrt -I./shmipc -c client.cpp -o client.o 
+In file included from client.cpp:1:0:
+client.h:11:1: error: new types may not be defined in a return type
+ class Client
+ ^
+client.h:11:1: note: (perhaps a semicolon is missing after the definition of ‘Client’)
+client.cpp:3:16: error: return type specification for constructor invalid
+ Client::Client()
+                ^
+Makefile:8: recipe for target 'all' failed
+make: *** [all] Error 1
